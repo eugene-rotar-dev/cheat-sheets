@@ -71,3 +71,23 @@ git rebase upstream/main
 # will update feature_branch in the remote repository with rebased changes
 git push origin feature_branch
 ```
+
+## Sync fork with upstream repository
+
+The origin repository is few commits behind upstream. The steps describe how to sync **main** branch from upstream with **main** branch of the origin
+```bash
+# fetch the latest changes from the upstream repository into local repository
+git fetch upstream
+
+# merge fetched changes into local repository
+
+# switch to the origin/main
+git checkout main
+# merge changes from upstream's main into main
+git merge upstream/main
+
+# push changes after mergeing the changes locally
+
+# push the updated main to origin
+git push origin main
+```
